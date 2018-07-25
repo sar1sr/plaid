@@ -21,7 +21,7 @@ import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import io.plaidapp.core.data.CoroutinesContextProvider
 import io.plaidapp.core.data.Result
-import io.plaidapp.core.dribbble.data.DribbbleRepository
+import io.plaidapp.core.dribbble.data.ShotsRepository
 import io.plaidapp.core.dribbble.data.api.model.Shot
 import io.plaidapp.core.util.event.Event
 import io.plaidapp.dribbble.domain.GetShareShotInfoUseCase
@@ -30,11 +30,11 @@ import kotlinx.coroutines.experimental.Job
 import kotlinx.coroutines.experimental.launch
 
 /**
- * View model for [DribbbleShotActivity].
+ * View model for [ShotActivity].
  */
-class DribbbleShotViewModel(
+class ShotViewModel(
     shotId: Long,
-    shotRepository: DribbbleRepository,
+    shotRepository: ShotsRepository,
     private val getShareShotInfoUseCase: GetShareShotInfoUseCase,
     private val contextProvider: CoroutinesContextProvider
 ) : ViewModel() {
